@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l4k-y6-fFQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HindMadurai-Bold.ttf">
+            <string>HindMadurai-Bold</string>
+        </array>
+        <array key="HindMadurai-Regular.ttf">
+            <string>HindMadurai-Regular</string>
+        </array>
+        <array key="HindMadurai-SemiBold.ttf">
+            <string>HindMadurai-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="COVIDScreening" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMN-JW-vxp">
+                                <rect key="frame" x="38" y="398" width="339" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.059942134969999998" green="0.25897263250000002" blue="0.6027525829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="32"/>
+                                <state key="normal" title="Begin Screening">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="StartScreeningButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cip-qo-bla"/>
+                                    <segue destination="iEE-ZR-iiH" kind="show" id="cYC-61-RBH"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbZ-dc-otM">
+                                <rect key="frame" x="87" y="140" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AeW-sO-8VH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Severe Symptoms-->
+        <scene sceneID="qaL-lC-t1w">
+            <objects>
+                <viewController id="iEE-ZR-iiH" customClass="SevereViewController" customModule="COVIDScreening" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aPF-wg-w5a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxC-k0-26k">
+                                <rect key="frame" x="38" y="551" width="338" height="52"/>
+                                <color key="backgroundColor" red="0.059942134969999998" green="0.25897263250000002" blue="0.6027525829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="F7e-C3-ekY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="32"/>
+                                <state key="normal" title="Yes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="cJ9-jx-OqX" kind="show" id="3xs-wc-3wd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUi-ot-9nV">
+                                <rect key="frame" x="20" y="140" width="374" height="382"/>
+                                <string key="text">Are You Experiencing any of the following symptoms?
+- Trouble breathing 
+- Persistent pain or pressure in    the chest 
+- New confusion 
+- Inability to wake or stay awake
+- Bluish lips or face
+
+</string>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="25"/>
+                                <color key="textColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18Z-rk-FgJ">
+                                <rect key="frame" x="38" y="633" width="338" height="52"/>
+                                <color key="backgroundColor" red="0.059942134969999998" green="0.25897263250000002" blue="0.6027525829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="0mz-6a-hT4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="E5V-Dl-DbM"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="rbZ-SN-E4R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="32"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="pkY-Xo-2QS" kind="show" id="fY9-xs-E69"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="18Z-rk-FgJ" firstAttribute="leading" secondItem="KBh-W7-de1" secondAttribute="leading" constant="38" id="7aO-m7-ZqW"/>
+                            <constraint firstItem="TxC-k0-26k" firstAttribute="top" secondItem="sUi-ot-9nV" secondAttribute="bottom" constant="29" id="97C-fY-il7"/>
+                            <constraint firstItem="KBh-W7-de1" firstAttribute="bottom" secondItem="18Z-rk-FgJ" secondAttribute="bottom" constant="128" id="FJm-AV-0l5"/>
+                            <constraint firstItem="KBh-W7-de1" firstAttribute="bottom" secondItem="18Z-rk-FgJ" secondAttribute="bottom" constant="128" id="Fqq-F7-yA7"/>
+                            <constraint firstItem="sUi-ot-9nV" firstAttribute="leading" secondItem="aPF-wg-w5a" secondAttribute="leadingMargin" id="KSl-kk-8RA"/>
+                            <constraint firstItem="18Z-rk-FgJ" firstAttribute="top" secondItem="TxC-k0-26k" secondAttribute="bottom" constant="30" id="Vgc-74-Tj9"/>
+                            <constraint firstItem="18Z-rk-FgJ" firstAttribute="leading" secondItem="TxC-k0-26k" secondAttribute="leading" id="Vkd-F5-uS7"/>
+                            <constraint firstItem="18Z-rk-FgJ" firstAttribute="centerX" secondItem="sUi-ot-9nV" secondAttribute="centerX" id="aXf-PY-Am5"/>
+                            <constraint firstItem="18Z-rk-FgJ" firstAttribute="trailing" secondItem="TxC-k0-26k" secondAttribute="trailing" id="fFR-Gj-lDC"/>
+                            <constraint firstItem="sUi-ot-9nV" firstAttribute="top" secondItem="KBh-W7-de1" secondAttribute="top" id="ja1-i2-3rA"/>
+                            <constraint firstItem="18Z-rk-FgJ" firstAttribute="centerX" secondItem="aPF-wg-w5a" secondAttribute="centerX" id="oHr-Xx-mmC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KBh-W7-de1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Severe Symptoms" id="B1l-dA-A4S"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsQ-U7-hX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.68115942029" y="129.91071428571428"/>
+        </scene>
+        <!--Age-->
+        <scene sceneID="PHz-A3-PZL">
+            <objects>
+                <viewController id="pkY-Xo-2QS" customClass="AgeViewController" customModule="COVIDScreening" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zaa-Wf-iZt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select your age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSU-Zf-W0V">
+                                <rect key="frame" x="0.0" y="140" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="20"/>
+                                <color key="textColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U8n-Kt-NhJ">
+                                <rect key="frame" x="0.0" y="198" width="414" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Age Cell" id="tCA-C8-vlJ" customClass="TableAgeCell" customModule="COVIDScreening" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tCA-C8-vlJ" id="spz-t7-Cpj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx7-72-MSb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="22"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="C3Q-20-D25" kind="show" id="C2U-Q3-PXi"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <connections>
+                                            <outlet property="AgeButton" destination="bx7-72-MSb" id="RRN-Ol-xzJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PjV-ef-SqG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Age" id="vH5-8I-CK3"/>
+                    <connections>
+                        <outlet property="TableView" destination="U8n-Kt-NhJ" id="6Do-Sd-B6E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAQ-v5-APT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2582.608695652174" y="128.57142857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jkg-R4-VEX">
+            <objects>
+                <viewController id="cJ9-jx-OqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2uv-fc-HR5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop and Call 911 or go to the emergency department. Urgent medical attention may be needed.  " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghP-qH-tJ9">
+                                <rect key="frame" x="20" y="326" width="374" height="244"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="244" id="Lxd-AR-w10"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="bNG-hV-X5I"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="bqz-xD-844"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="244" id="pQF-qf-HQ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-SemiBold" family="Hind Madurai" pointSize="25"/>
+                                <color key="textColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ghP-qH-tJ9" firstAttribute="centerX" secondItem="2uv-fc-HR5" secondAttribute="centerX" id="HbM-aJ-kiG"/>
+                            <constraint firstItem="ghP-qH-tJ9" firstAttribute="centerY" secondItem="2uv-fc-HR5" secondAttribute="centerY" id="NaH-E6-so2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NPQ-is-EME"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0pr-TI-Ox8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjN-Q4-CFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2582.608695652174" y="857.8125"/>
+        </scene>
+        <!--Screening-->
+        <scene sceneID="v3s-If-O3V">
+            <objects>
+                <viewController id="C3Q-20-D25" customClass="ScreeningViewController" customModule="COVIDScreening" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nDH-Nm-ng7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rdr-WT-z6Z">
+                                <rect key="frame" x="0.0" y="198" width="414" height="527"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Symptom Cell" id="XXS-ak-8Ob" customClass="symptomCell" customModule="COVIDScreening" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XXS-ak-8Ob" id="VhM-YG-jtA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8NN-wS-hSl">
+                                                    <rect key="frame" x="347" y="7" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="onTintColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59v-WD-3Cc">
+                                                    <rect key="frame" x="20" y="9" width="319" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="22"/>
+                                                    <color key="textColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="SymptomLabel" destination="59v-WD-3Cc" id="7lw-4H-OXA"/>
+                                            <outlet property="SymptomSwitch" destination="8NN-wS-hSl" id="MEv-vS-p97"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select all that apply" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8t-TB-Gqb">
+                                <rect key="frame" x="0.0" y="140" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="20"/>
+                                <color key="textColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNm-S3-6iC">
+                                <rect key="frame" x="38" y="733" width="338" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.059942134969999998" green="0.25897263250000002" blue="0.6027525829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HindMadurai-Bold" family="Hind Madurai" pointSize="32"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="7As-ij-Apc" kind="show" id="RLa-w2-z9X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0Qd-RS-Hts"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Screening" id="Hai-hF-FKd"/>
+                    <connections>
+                        <outlet property="tableView" destination="rdr-WT-z6Z" id="60o-VB-IOK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4P4-WR-DwY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3400.0000000000005" y="129.91071428571428"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="sSY-5g-I8Q">
+            <objects>
+                <viewController id="6lM-6F-a2f" customClass="InfoViewController" customModule="COVIDScreening" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cf7-GE-WVs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cases: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTc-Zd-u0p">
+                                <rect key="frame" x="20" y="198" width="374" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="zb9-JV-wPq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="25"/>
+                                <color key="textColor" red="0.15225414163964293" green="0.39578930952876573" blue="0.81644096315543313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Deaths: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfZ-Pr-3KK">
+                                <rect key="frame" x="20" y="275" width="374" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="PgG-S2-QWM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="25"/>
+                                <color key="textColor" red="0.15225414163964293" green="0.39578930952876573" blue="0.81644096315543313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-B9-agJ">
+                                <rect key="frame" x="0.0" y="352" width="414" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnQ-HL-SdN" customClass="IconButton" customModule="COVIDScreening" customModuleProvider="target">
+                                <rect key="frame" x="335" y="83" width="40" height="40"/>
+                                <color key="tintColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="map.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="800" scale="default" weight="regular"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pointSize">
+                                        <real key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="LocationButtonClicked:" destination="6lM-6F-a2f" eventType="touchUpInside" id="1gp-Cl-TNZ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0f-LH-hLm">
+                                <rect key="frame" x="38" y="586" width="338" height="52"/>
+                                <color key="backgroundColor" red="0.059942134974100524" green="0.25897263253730257" blue="0.602752582873743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="hTX-2F-0QI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-SemiBold" family="Hind Madurai" pointSize="25"/>
+                                <state key="normal" title="Select State">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="StateButtonClicked:" destination="6lM-6F-a2f" eventType="touchUpInside" id="qc9-IF-KtE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-CH-p4b">
+                                <rect key="frame" x="20" y="131" width="374" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="hBg-Av-WiI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-Bold" family="Hind Madurai" pointSize="35"/>
+                                <color key="textColor" red="0.15225414163964293" green="0.39578930952876573" blue="0.81644096315543313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st Dose of Vaccine:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ss3-oP-x5G">
+                                <rect key="frame" x="20" y="352" width="374" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="JXa-GJ-TfA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="25"/>
+                                <color key="textColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fully Vaccinated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DtN-i0-hI8">
+                                <rect key="frame" x="20" y="413.5" width="374" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="Gx4-m7-wA2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="25"/>
+                                <color key="textColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="r0f-LH-hLm" firstAttribute="centerX" secondItem="OTc-Zd-u0p" secondAttribute="centerX" id="3FR-NE-da4"/>
+                            <constraint firstItem="MfZ-Pr-3KK" firstAttribute="top" secondItem="OTc-Zd-u0p" secondAttribute="bottom" constant="8" id="5Xe-qv-DFj"/>
+                            <constraint firstItem="HfM-CH-p4b" firstAttribute="leading" secondItem="OTc-Zd-u0p" secondAttribute="leading" id="I8q-Vu-F9r"/>
+                            <constraint firstItem="EnQ-HL-SdN" firstAttribute="top" secondItem="Pel-Jq-U0G" secondAttribute="top" constant="39" id="JcP-cW-uoC"/>
+                            <constraint firstItem="ss3-oP-x5G" firstAttribute="top" secondItem="Ts0-B9-agJ" secondAttribute="top" id="Jqn-VJ-3Sy"/>
+                            <constraint firstItem="DtN-i0-hI8" firstAttribute="centerY" secondItem="cf7-GE-WVs" secondAttribute="centerY" id="K6I-FN-T3x"/>
+                            <constraint firstItem="Pel-Jq-U0G" firstAttribute="bottom" secondItem="r0f-LH-hLm" secondAttribute="bottom" constant="175" id="LIc-wq-0ux"/>
+                            <constraint firstItem="HfM-CH-p4b" firstAttribute="trailing" secondItem="OTc-Zd-u0p" secondAttribute="trailing" id="McJ-gs-QRa"/>
+                            <constraint firstItem="MfZ-Pr-3KK" firstAttribute="leading" secondItem="OTc-Zd-u0p" secondAttribute="leading" id="PUU-qr-qu9"/>
+                            <constraint firstItem="HfM-CH-p4b" firstAttribute="top" secondItem="EnQ-HL-SdN" secondAttribute="bottom" constant="8" id="Ufp-Gr-cyZ"/>
+                            <constraint firstItem="Pel-Jq-U0G" firstAttribute="trailing" secondItem="EnQ-HL-SdN" secondAttribute="trailing" constant="39" id="adx-yg-xkP"/>
+                            <constraint firstItem="MfZ-Pr-3KK" firstAttribute="trailing" secondItem="OTc-Zd-u0p" secondAttribute="trailing" id="aiy-JB-ylZ"/>
+                            <constraint firstItem="ss3-oP-x5G" firstAttribute="leading" secondItem="MfZ-Pr-3KK" secondAttribute="leading" id="bnF-H7-0Lk"/>
+                            <constraint firstItem="r0f-LH-hLm" firstAttribute="top" secondItem="Ts0-B9-agJ" secondAttribute="bottom" constant="18" id="dKL-ak-hBy"/>
+                            <constraint firstItem="DtN-i0-hI8" firstAttribute="trailing" secondItem="ss3-oP-x5G" secondAttribute="trailing" id="h0L-NW-0XS"/>
+                            <constraint firstItem="r0f-LH-hLm" firstAttribute="centerX" secondItem="cf7-GE-WVs" secondAttribute="centerX" id="hZi-xF-9Pg"/>
+                            <constraint firstItem="EnQ-HL-SdN" firstAttribute="leading" secondItem="Pel-Jq-U0G" secondAttribute="leading" constant="335" id="ik7-BT-LGe"/>
+                            <constraint firstItem="r0f-LH-hLm" firstAttribute="leading" secondItem="Pel-Jq-U0G" secondAttribute="leading" constant="38" id="ooH-Jy-ZmT"/>
+                            <constraint firstItem="ss3-oP-x5G" firstAttribute="trailing" secondItem="MfZ-Pr-3KK" secondAttribute="trailing" id="owU-Rr-L0T"/>
+                            <constraint firstItem="OTc-Zd-u0p" firstAttribute="top" secondItem="EnQ-HL-SdN" secondAttribute="bottom" constant="48" id="rVk-sS-iHI"/>
+                            <constraint firstItem="OTc-Zd-u0p" firstAttribute="top" secondItem="cf7-GE-WVs" secondAttribute="top" constant="171" id="rkg-x3-xFR"/>
+                            <constraint firstItem="r0f-LH-hLm" firstAttribute="centerX" secondItem="Ts0-B9-agJ" secondAttribute="centerX" id="suh-Rc-L6Y"/>
+                            <constraint firstItem="DtN-i0-hI8" firstAttribute="leading" secondItem="ss3-oP-x5G" secondAttribute="leading" id="uB4-Ha-XPF"/>
+                            <constraint firstItem="OTc-Zd-u0p" firstAttribute="leading" secondItem="cf7-GE-WVs" secondAttribute="leadingMargin" id="vUw-PO-blx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pel-Jq-U0G"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="info.circle" catalog="system" id="j2R-mn-TUt"/>
+                    <connections>
+                        <outlet property="CasesLabel" destination="OTc-Zd-u0p" id="oiw-Yu-9oH"/>
+                        <outlet property="DeathsLabel" destination="MfZ-Pr-3KK" id="f7n-Dm-5AR"/>
+                        <outlet property="FirstDoseLabel" destination="ss3-oP-x5G" id="Eub-M5-Btx"/>
+                        <outlet property="FullyVaccLabel" destination="DtN-i0-hI8" id="ABA-gU-A2d"/>
+                        <outlet property="LocationPicker" destination="Ts0-B9-agJ" id="CsF-Xa-UHO"/>
+                        <outlet property="StateButton" destination="r0f-LH-hLm" id="T2r-Zv-bs0"/>
+                        <outlet property="StateLabel" destination="HfM-CH-p4b" id="Ewk-8q-jDs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqm-7K-Ah9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="-545.08928571428567"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VfP-lx-LlC">
+            <objects>
+                <tabBarController id="l4k-y6-fFQ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GpW-6a-5f2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6lM-6F-a2f" kind="relationship" relationship="viewControllers" id="y5Z-3f-6XH"/>
+                        <segue destination="ePA-KA-e7g" kind="relationship" relationship="viewControllers" id="iIn-4s-FyT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UnH-9j-Rl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1203" y="-171"/>
+        </scene>
+        <!--Screening-->
+        <scene sceneID="AY1-h7-68H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ePA-KA-e7g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Screening" image="thermometer" catalog="system" id="xMi-f2-TNn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Wf7-2C-Rel">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HindMadurai-Regular" family="Hind Madurai" pointSize="17"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HindMadurai-Bold" family="Hind Madurai" pointSize="35"/>
+                            <color key="textColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Zu-H4-d5f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sgl-fW-aVl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="IsZ-64-7zr">
+            <objects>
+                <viewController id="7As-ij-Apc" customClass="ResultsViewController" customModule="COVIDScreening" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kwj-LY-gO9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4px-u4-tTg">
+                                <rect key="frame" x="20" y="140" width="374" height="722"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="I3l-2D-XFW"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="722" id="JeZ-oh-bHf"/>
+                                    <constraint firstAttribute="height" constant="722" id="gUZ-ED-GOH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="244" id="hKJ-bc-jSt"/>
+                                    <constraint firstAttribute="width" constant="374" id="kCT-bJ-Kf4"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="qDc-k6-cuc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HindMadurai-SemiBold" family="Hind Madurai" pointSize="18"/>
+                                <color key="textColor" red="0.1522541416" green="0.39578930950000002" blue="0.81644096320000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4px-u4-tTg" firstAttribute="leading" secondItem="kwj-LY-gO9" secondAttribute="leadingMargin" id="JXk-ct-4LJ"/>
+                            <constraint firstItem="R8X-7d-WTc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4px-u4-tTg" secondAttribute="trailing" symbolic="YES" id="OGz-E0-0yw"/>
+                            <constraint firstItem="4px-u4-tTg" firstAttribute="centerY" secondItem="kwj-LY-gO9" secondAttribute="centerY" constant="53" id="jIp-nL-LVc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R8X-7d-WTc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Results" id="hO7-b1-00q"/>
+                    <connections>
+                        <outlet property="ResultsText" destination="4px-u4-tTg" id="aSf-nP-EN8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GaH-dv-Vqe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4176.811594202899" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
+        <image name="map.fill" catalog="system" width="64" height="56"/>
+        <image name="thermometer" catalog="system" width="42" height="64"/>
+    </resources>
+</document>

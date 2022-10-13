@@ -1,5 +1,5 @@
 # Covid_Screening_and_Data
-This Covid Screening and Data application provides suggestions based on Covid-19 Symptoms and provides basic data about the state of the Covid-19 Pandemic.
+This Covid Screening and Data application provides suggestions based on Covid-19 Symptoms and provides basic state-based data about the state of the Covid-19 Pandemic in the U.S.
 
 https://user-images.githubusercontent.com/63000898/195472951-10c6f2d3-7938-48c1-9240-efc10bcef1c5.mov
 
